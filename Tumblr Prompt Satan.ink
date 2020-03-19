@@ -1,4 +1,5 @@
 VAR answers = 0
+VAR name = "Kate"
 
 ->Start
 -> Final 
@@ -44,7 +45,7 @@ What should you do?
             You stumble backwards and fall into more... not water, but something else. Sticky and warm, with a slight stench of... copper. It's starting to fill the room more, slowly moving up to your knees.
             The ambient lighting from the tank has disapeared, replaced with the bright red glow from the fish's eyes. It starts to climb out of the water. Climb? When did it grow limbs? Why so many? And eyes, everywhere, hyperfocusing its pupils on you, now bathed in light like the blood filling the room. The rest of its body starts to grow, filling the room with its body parts. 
             Backing up against the wall to avoid this monstrosity, you've cornered yourself. It brings its teeth closer to your face as you shrink away.
-            "A shame really. I was hoping for more. But human are just like any other animal. Sadly the blood filling this room will not drown you before I have my own fun." 
+            "A shame really. I was hoping for more. But humans are just like any other animal. Sadly the blood filling this room will not drown you before I have my own fun." 
             -> Final
             
         ** [Greet the fish]
@@ -58,7 +59,38 @@ What should you do?
 
 ////////////////////////////////////////////////////////////////////////////////////////
 ===Introduction
-You're taken aback by the response. Although it did not move its mouth you're sure that it was the fish that responded. 
+You're taken aback by the response. Although it did not move its mouth you're sure that it was the fish that responded. It swims closer to you, sticking its head through the water into the air where you'd expect a piece of glass to be. 
+
+*[Ask who the fish is]
+    "Who are you?" 
+    "Rude to ask for something without giving anything of yourself."
+    
+    **[Apologize]
+        Oh, forgive me. My name is {name}.
+        
+    **[Acuse the fish]
+        ~answers--
+        "Why should I tell you my name?"
+        "Well then why should I?"
+        "Because I asked first."
+        "Quite a stupid reason to try and defend your answer, but I expect nothing less from a person of your intelligence."
+        
+        ***[Grab the fish]
+            "Oh yeah, well you're just a stupid fish. How smart could you possibly be stuck in that stupid tank dependent on water." Reaching your hand out to grab the stupid fish, halfway there you are slammed back. 
+            
+            Pinned to the ground by a monstrous arm and wind knocked out of you, you struggle to breath or focus. Its talons pierce your skin, digging into your flesh until it hits bone and pushes even harder to try and break them. Your shrieks and cries falling on deaf ears. Body suddenly feeling cold and survival instincts kicking in you start to claw at the hand holding you down. Scratching until your nails tear and start to bleed becoming nubs of torn flesh. Blood pools around your body keeping you warm. At this of rate blood loss and hyperventalation you're sure to pass out soon. Out of the corner of teary blurred eyes, you see it. No longer a fish it crawls over on its many limbs. Body covered in eyes bathing the space in a deadly red glow. 
+            
+            "A shame really. I was hoping for more. But humans are just like any other animal. Unfortunately for you, you will not die or sleep until I've had my own fill."
+            ->Final
+            
+        ***[Conceed]
+        
+        
+*[Introduce yourself]
+    ~answers++  
+    Hi, my name is {name}. Nice to meet you. 
+    
+-
 
 
 ->DONE
@@ -74,7 +106,8 @@ You're taken aback by the response. Although it did not move its mouth you're su
     - answers:
         Ah, so life has made yet another mistake. I'll allow your leave for now, but I might not make the same decision if I see you a next time. Now, you better wake up before you can't. 
     - else: 
-        You were born to fail. And now you'll stay here to suffer.
+        You were born to fail. And now you'll stay here to suffer. 
+
 }
 ->END
     
