@@ -2,7 +2,6 @@ VAR answers = 0
 VAR name = "Kate"
 
 ->Start
--> Final 
 ->END
 
 
@@ -66,14 +65,14 @@ You're taken aback by the response. Although it did not move its mouth you're su
     "Rude to ask for something without giving anything of yourself."
     
     **[Apologize]
-        Oh, forgive me. My name is {name}.
+        "Oh, forgive me. My name is {name}."
         
     **[Acuse the fish]
         ~answers--
         "Why should I tell you my name?"
         "Well then why should I?"
         "Because I asked first."
-        "Quite a stupid reason to try and defend your answer, but I expect nothing less from a person of your intelligence."
+        "Quite a stupid reason to try and defend your answer, but I expected nothing less from a person of your intelligence."
         
         ***[Grab the fish]
             "Oh yeah, well you're just a stupid fish. How smart could you possibly be stuck in that stupid tank dependent on water." Reaching your hand out to grab the stupid fish, halfway there you are slammed back. 
@@ -84,18 +83,38 @@ You're taken aback by the response. Although it did not move its mouth you're su
             ->Final
             
         ***[Conceed]
+            "Geez fine, I'll tell you then. I'm {name}."
+            "Well that wasn't so hard was is now."
+            "So what about yourself then?"
+            "Impatience and Insolence will be your downfall child. That aside."
         
         
 *[Introduce yourself]
     ~answers++  
-    Hi, my name is {name}. Nice to meet you. 
+    "Hi, my name is {name}. Nice to meet you."
     
--
+    
+    
+- "It's a pleasure to meet you {name}. "Unfortunately I do not have a name. I am mearly an entity consuming this particular time and space. My form only structured to fulfill my current purpose here." 
 
 
-->DONE
+->WhyAmIHere
 ////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+===WhyAmIHere
+
+* "What is your current purpose here?" 
+    "I am unsure. 
+* "Why am I here?"
+
+-
+->DONE
+////////////////////////////////////////////////////////////////////////////////////////
 
 
 
