@@ -1,15 +1,21 @@
 VAR answers = 0
 
 ->Start
-
+-> Final 
 ->END
 
+
+////////////////////////////////////////////////////////////////////////////////////////
 ===Start===
 You wake up to the sound of dripping water. 
 In front of you is a fish tank with with only one fish. There's an onmious ambient glow eminating from the tank, filling the otherwise pitch black room.
 ->WhatShouldYouDo
-->DONE
+/////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////
 ===WhatShouldYouDo===
 What should you do?
 
@@ -39,24 +45,36 @@ What should you do?
             The ambient lighting from the tank has disapeared, replaced with the bright red glow from the fish's eyes. It starts to climb out of the water. Climb? When did it grow limbs? Why so many? And eyes, everywhere, hyperfocusing its pupils on you, now bathed in light like the blood filling the room. The rest of its body starts to grow, filling the room with its body parts. 
             Backing up against the wall to avoid this monstrosity, you've cornered yourself. It brings its teeth closer to your face as you shrink away.
             "A shame really. I was hoping for more. But human are just like any other animal. Sadly the blood filling this room will not drown you before I have my own fun." 
-            -> Failed
+            -> Final
             
         ** [Greet the fish]
             "Well hello there, aren't you an odd fish."
-            "I have other features if you're interested."
-            
-        -  
-     
+            "Why thank you."
+            ->Introduction
+////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+===Introduction
+You're taken aback by the response. Although it did not move its mouth you're sure that it was the fish that responded. 
+
+
 ->DONE
+////////////////////////////////////////////////////////////////////////////////////////
 
-===Failed
 
-You were born to fail. And now you'll stay here to suffer. 
 
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+===Final
+{
+    - answers:
+        Ah, so life has made yet another mistake. I'll allow your leave for now, but I might not make the same decision if I see you a next time. Now, you better wake up before you can't. 
+    - else: 
+        You were born to fail. And now you'll stay here to suffer.
+}
 ->END
-
-===Passed
-
-Ah, so life has made yet another mistake. I'll allow your leave for now, but I might not make the same decision if I see you a next time. Now, you better wake up before you can't. 
-
-->END
+    
